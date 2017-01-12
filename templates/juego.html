@@ -6,12 +6,17 @@
 
 <body>
     <h1>SADDAM</h1>
+    <h3>Puntaje</h3>
+    <h3>{{score}}</h3>
     <h3>Palabra</h3>
     <h3>{{word}}</h3>
     <form action="./play" method="POST">
-        Ingresar letra: <input type="text" id="letter_box" maxlength="1" />
+        Ingresar letra: <input type="text" id="letter_box" name="letter_box" maxlength="1" />
         <input type="submit" id="btn_submit" value="Probar" />
     </form>
+
+    <a href="./play">Reiniciar</a>
+
 </body>
 
 
