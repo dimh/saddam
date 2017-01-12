@@ -1,6 +1,7 @@
 class Saddam:
+
 	def __init__(self, palabra):
-		self.palabra = list(palabra)
+		self.palabra = palabra
 
 	def posicion(self, letra):
 		posiciones = []

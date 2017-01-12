@@ -1,5 +1,7 @@
 import sys
 from flask import Flask, render_template, session
+from models.saddam import Saddam
+from models.words import Word
 app = Flask(__name__, static_url_path = "", static_folder = "templates/static")
 
 @app.route("/")
