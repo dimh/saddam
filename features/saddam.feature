@@ -20,3 +20,8 @@ Scenario: validar letra en la palabra 2
     When ingresa la letra H
     Then retorna la palabra ****
 
+Scenario: Load Game Page
+    Given load game page
+    Then show title message
+    Then show input letter
+    Then show word
