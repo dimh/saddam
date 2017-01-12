@@ -2,7 +2,7 @@ class Saddam:
 
 	def __init__(self, palabra):
 		self.palabra = palabra
-		self.ofuscada = '_'*len(palabra)
+		self._ofuscada = '_'*len(palabra)
 
 	def posicion(self, letra):
 		posiciones = []
@@ -13,5 +13,13 @@ class Saddam:
 			i += 1
 		return posiciones
 		
-	def ofuscada():
-		return self.ofuscada
+	def ofuscada(self):
+		return self._ofuscada
+	
+	def buscar(self, letra):
+		posiciones = self.posicion(letra)
+		arrOfuscada = list(self._ofuscada)	
+		for p in posiciones:
+			arrOfuscada[p]= letra
+		self._ofuscada = ''.join(arrOfuscada)
+		return self._ofuscada 
