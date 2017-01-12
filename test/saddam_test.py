@@ -16,3 +16,13 @@ class SaddamTest(unittest.TestCase):
 		saddam = Saddam('SELECCIONES')
 		posicion = saddam.posicion('S')
 		self.assertEqual( [0,10], posicion)
+
+	def test_obtener_palabra_ofuscada(self):
+		saddam = Saddam('SELECCIONES')
+		ofuscada = saddam.ofuscada()
+		self.assertEqual( "___________", ofuscada)
+
+	def test_buscar_letra_en_palabra(self):
+		saddam = Saddam('SELECCIONES')
+		ofuscada = saddam.buscar('E')
+		self.assertEqual( "_E_E_____E_", ofuscada)
