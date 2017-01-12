@@ -2,3 +2,4 @@ flask
 behave
 splinter[flask]
 nose
+behave-jenkins

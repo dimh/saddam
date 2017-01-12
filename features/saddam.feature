@@ -1,8 +1,8 @@
 Feature: Play Saddam Game
 
 Scenario: Load initial page
-    Given load game
-    Then show initial message
+    Given load page: "http://localhost:5000"
+    Then show text "SADDAM"
 
 Scenario: validar letra en la palabra
     Given Juego Iniciado
@@ -21,7 +21,15 @@ Scenario: validar letra en la palabra 2
     Then retorna la palabra ****
 
 Scenario: Load Game Page
-    Given load game page
-    Then show title message
-    Then show input letter
-    Then show word
+    Given load page: "http://localhost:5000/play"
+    Then show text "SADDAM"
+    Then show text "Ingresar letra"
+    Then show text "Palabra"
+
+Scenario: Load Win Page
+    Given load page: "http://localhost:5000/win"
+    Then show text "WIN"
+
+Scenario: Load Lose Page
+    Given load page: "http://localhost:5000/lose"
+    Then show text "LOSE"
